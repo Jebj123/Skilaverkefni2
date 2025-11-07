@@ -7,31 +7,39 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&family=Orbitron:wght@400..900&family=VT323&display=swap" rel="stylesheet">
+
     
     
   </head>
   <body>
     <header>
       <section class="box-container">
+        <div id="Sounds">
+        <audio id="audio" src="resources/click.mp3" autostart="false"></audio>
+        <audio id="audioTwo" src="resources/ahhh.mp3" autostart="false"></audio>
+        <audio id="tap" src="resources/click2.mp3" autostart="false"></audio>
+        <audio id="erase" src="resources/erase.mp3" autostart="false"></audio>
+        </div>
+
         <div class="calculatorBox">
           <input id="display" class="boxResult" type="text" ></input>
-          <button class="box nine" onclick="addNumber('9')">9</button>
-          <button class="box eight" onclick="addNumber('8')">8</button>
-          <button class="box seven" onclick="addNumber('7')">7</button>
-          <button class="box six" onclick="addNumber('6')">6</button>
-          <button class="box five" onclick="addNumber('5')">5</button>
-          <button class="box four" onclick="addNumber('4')">4</button>
-          <button class="box three" onclick="addNumber('3')">3</button>
-          <button class="box two" onclick="addNumber('2')">2</button>
-          <button class="box one" onclick="addNumber('1')">1</button>
-          <button class="box null" onclick="addNumber('0')">0</button>
-          <button class="box plus" onclick="addOperation('+')">+</button>
-          <button class="box minus" onclick="addOperation('-')">-</button>
-          <button class="box times" onclick="addOperation('*')">*</button>
-          <button class="box divide" onclick="addOperation('/')">/</button>
-          <button class="box reset" onclick="resetDisplay()">AC</button>
-          <button class="box equal" onclick="reikna()">=</button>
+          <button class="box nine" onclick="addNumber('9'); makeNoise()">9</button>
+          <button class="box eight" onclick="addNumber('8'); makeNoise()">8</button>
+          <button class="box seven" onclick="addNumber('7'); makeNoise()">7</button>
+          <button class="box six" onclick="addNumber('6'); makeNoise()">6</button>
+          <button class="box five" onclick="addNumber('5'); makeNoise()">5</button>
+          <button class="box four" onclick="addNumber('4'); makeNoise()">4</button>
+          <button class="box three" onclick="addNumber('3'); makeNoise()">3</button>
+          <button class="box two" onclick="addNumber('2'); makeNoise()">2</button>
+          <button class="box one" onclick="addNumber('1'); makeNoise()">1</button>
+          <button class="box null" onclick="addNumber('0'); makeNoise()">0</button>
+          <button class="box plus" onclick="addOperation('+'); makeTap()">+</button>
+          <button class="box minus" onclick="addOperation('-');makeTap()">-</button>
+          <button class="box times" onclick="addOperation('*');makeTap()">*</button>
+          <button class="box divide" onclick="addOperation('/');makeTap()">/</button>
+          <button class="box reset" onclick="resetDisplay(); eraseSound()">AC</button>
+          <button class="box equal" onclick="reikna(); makeTap()">=</button>
         </div>
 
         <script src="script.js"></script>

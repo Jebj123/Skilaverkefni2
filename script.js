@@ -58,3 +58,18 @@ function resetDisplay() {
   currentOperation = "";
   document.getElementById("display").value = "";
 }
+
+function makeNoise() {
+  var sound = document.getElementById("audio");
+  sound.play();
+}
+
+function makeTap() {
+  var sound = document.getElementById("tap");
+  sound.play();
+}
+
+function eraseSound() {
+  var sound = document.getElementById("erase");
+  sound.play();
+}
