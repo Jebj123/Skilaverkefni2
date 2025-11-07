@@ -10,7 +10,7 @@
   color: #ffffff;
   padding: 30px;
   border-radius: 5px;
-  border: inset 2px;
+  border: inset black 2px;
 }
 .box {
   background-color: rgb(86, 86, 158);
@@ -40,7 +40,6 @@
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-image: url(resources/calcudog.png);
 }
 
 .plus {
@@ -137,10 +136,17 @@
 .reset {
   grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-row-end: 4;
   width: 70px;
   background-color: red;
+}
+.delete {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 70px;
 }
 .equal {
   grid-column-start: 3;

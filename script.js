@@ -52,11 +52,17 @@ function reikna() {
   document.getElementById("display").value = currentInput;
 }
 
-function resetDisplay() {
+function resetAll() {
   currentInput = "";
   previousInput = "";
   currentOperation = "";
   document.getElementById("display").value = "";
+}
+function deleteNumber() {
+  currentInput = currentInput.toString().slice(0, -1);
+  currentOperation = "";
+  previousInput = "";
+  document.getElementById("display").value = currentInput;
 }
 
 function makeNoise() {
