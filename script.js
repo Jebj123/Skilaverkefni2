@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll("button");
 const addOn = ["*", "/", "-", "+", "="];
 let result = "";
 
-const calculate = (btnValue) => {
+const reikna = (btnValue) => {
   display.focus();
   if (btnValue === "=" && result !== "") {
     result = eval(result);
@@ -19,7 +19,7 @@ const calculate = (btnValue) => {
 };
 
 buttons.forEach((button) => {
-  button.addEventListener("click", (e) => calculate(e.target.dataset.value));
+  button.addEventListener("click", (e) => reikna(e.target.dataset.value));
 });
 
 function makeNoise() {
