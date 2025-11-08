@@ -1,69 +1,26 @@
-let currentInput = "";
-let currentOperation = "";
-let previousInput = "";
+const display = document.getElementById("display");
+const buttons = document.querySelectorAll("button");
+const addOn = ["*", "/", "-", "+", "="];
+let result = "";
 
-function addNumber(number) {
-  currentInput += number;
-  document.getElementById(
-    "display"
-  ).value = `${previousInput} ${currentOperation} ${currentInput}`;
-}
-
-function addOperation(operation) {
-  if (currentInput === "") return;
-  if (previousInput !== "") {
-    calculate();
+const calculate = (btnValue) => {
+  display.focus();
+  if (btnValue === "=" && result !== "") {
+    result = eval(result);
+  } else if (btnValue === "AC") {
+    result = "";
+  } else if (btnValue === "DEL") {
+    result = result.toString().slice(0, -1);
+  } else {
+    if (result === "" && addOn.includes(btnValue)) return;
+    result += btnValue;
   }
-  currentOperation = operation;
-  previousInput = currentInput;
-  currentInput = "";
-  document.getElementById(
-    "display"
-  ).value = `${previousInput} ${currentOperation}`;
-}
+  display.value = result;
+};
 
-function reikna() {
-  if (previousInput === "" || currentInput === "") return;
-  let result;
-  let prev = parseFloat(previousInput);
-  let current = parseFloat(currentInput);
-
-  switch (currentOperation) {
-    case "+":
-      result = prev + current;
-      break;
-    case "-":
-      result = prev - current;
-      break;
-    case "/":
-      if (current === 0) {
-        alert("Get ekki deilt með 0");
-        return;
-      }
-      result = prev / current;
-      break;
-    case "*":
-      result = prev * current;
-      break;
-  }
-  currentInput = result.toString();
-  currentOperation = "";
-  previousInput = "";
-  document.getElementById("display").value = currentInput;
-}
-
-function resetAll() {
-  currentInput = "";
-  previousInput = "";
-  currentOperation = "";
-  document.getElementById("display").value = "";
-}
-function deleteNumber() {
-  currentInput = currentInput.toString().slice(0, -1);
-  currentOperation = "";
-  previousInput = "";
-  document.getElementById("display").value = currentInput;
-}
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => calculate(e.target.dataset.value));
+});
 
 function makeNoise() {
   var sound = document.getElementById("audio");

@@ -1,6 +1,6 @@
 .box-container {
   height: 470px;
-  width: 450px;
+  width: 470px;
 }
 .calculatorBox {
   display: grid;
@@ -23,11 +23,11 @@
 .boxResult {
   background-color: rgb(211, 211, 211);
   grid-column-start: 1;
-  grid-column-end: 4;
+  grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
   height: 75px;
-  width: 393px;
+  width: 402px;
   color: black;
   font-size: 50px;
   border-radius: 5px;
@@ -46,8 +46,7 @@
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 4;
-  grid-row-end: 7;
-  width: 70px;
+  grid-row-end: 6;
   background-color: bisque;
   color: rgb(255, 255, 255);
 }
@@ -141,17 +140,31 @@
   width: 70px;
   background-color: red;
 }
-.delete {
+.equal {
   grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  width: 70px;
+  grid-row-start: 6;
+  grid-row-end: 7;
+
+  background-color: gold;
 }
-.equal {
+.dot {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 6;
   grid-row-end: 7;
-  background-color: gold;
+}
+.del {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: rgb(122, 108, 82);
+}
+.erase {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: rgb(167, 44, 44);
 }

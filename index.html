@@ -24,23 +24,24 @@
 
         <div class="calculatorBox">
           <input id="display" class="boxResult" type="text" ></input>
-          <button class="box nine" onclick="addNumber('9'); makeNoise()">9</button>
-          <button class="box eight" onclick="addNumber('8'); makeNoise()">8</button>
-          <button class="box seven" onclick="addNumber('7'); makeNoise()">7</button>
-          <button class="box six" onclick="addNumber('6'); makeNoise()">6</button>
-          <button class="box five" onclick="addNumber('5'); makeNoise()">5</button>
-          <button class="box four" onclick="addNumber('4'); makeNoise()">4</button>
-          <button class="box three" onclick="addNumber('3'); makeNoise()">3</button>
-          <button class="box two" onclick="addNumber('2'); makeNoise()">2</button>
-          <button class="box one" onclick="addNumber('1'); makeNoise()">1</button>
-          <button class="box null" onclick="addNumber('0'); makeNoise()">0</button>
-          <button class="box plus" onclick="addOperation('+'); makeTap()">+</button>
-          <button class="box minus" onclick="addOperation('-');makeTap()">-</button>
-          <button class="box times" onclick="addOperation('*');makeTap()">*</button>
-          <button class="box divide" onclick="addOperation('/');makeTap()">/</button>
-          <button class="box reset" onclick="deleteNumber(); makeTap()">del</button>
-          <button class="box delete" onclick="resetAll(); eraseSound()">AC</button>
-          <button class="box equal" onclick="reikna(); makeTap()">=</button>
+          <button class="box nine" onclick="makeNoise()" data-value="9">9</button>
+          <button class="box eight" onclick="makeNoise()" data-value="8">8</button>
+          <button class="box seven" onclick="makeNoise()"data-value="7">7</button>
+          <button class="box six" onclick=" makeNoise()"data-value="6">6</button>
+          <button class="box five" onclick=" makeNoise()" data-value="5">5</button>
+          <button class="box four" onclick=" makeNoise()" data-value="4">4</button>
+          <button class="box three" onclick="makeNoise()" data-value="3">3</button>
+          <button class="box two" onclick="makeNoise()" data-value="2">2</button>
+          <button class="box one" onclick=" makeNoise()" data-value="1">1</button>
+          <button class="box null" onclick=" makeNoise()" data-value="0">0</button>
+          <button class="box dot" onclick=" makeNoise()" data-value=".">.</button>
+          <button class="box plus" onclick=" makeTap()" data-value="+">+</button>
+          <button class="box minus" onclick="makeTap()" data-value="-">-</button>
+          <button class="box times" onclick="makeTap()" data-value="*">*</button>
+          <button class="box divide" onclick="makeTap()" data-value="/">/</button>
+          <button class="box erase" onclick="eraseSound()" data-value="AC">AC</button>
+          <button class="box equal" onclick="makeTap()" data-value="=">=</button>
+          <button class="box del" onclick="makeTap()" data-value="DEL">Del</button>
         </div>
 
         <script src="script.js"></script>
