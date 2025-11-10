@@ -6,7 +6,7 @@ let result = "";
 const reikna = (btnValue) => {
   display.focus();
   if (btnValue === "=" && result !== "") {
-    result = eval(result);
+    result = eval(display.value);
   } else if (btnValue === "AC") {
     result = "";
   } else if (btnValue === "DEL") {
