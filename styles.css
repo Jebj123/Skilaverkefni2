@@ -1,41 +1,48 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+
 .box-container {
   height: 470px;
-  width: 470px;
+  width: 500px;
 }
 .calculatorBox {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 5px;
   grid-template-columns: 100px 100px 100px;
-  background-color: rgb(228, 228, 228);
-  color: #ffffff;
-  padding: 30px;
-  border-radius: 5px;
-  border: inset black 2px;
+  padding: 40px;
+  border-radius: 20px;
+  background-image: url(resources/square2.png);
+  background-size: 100% 100%;
+  border: outset 8px rgba(0, 0, 255, 0.822);
 }
 .box {
   background-color: rgb(86, 86, 158);
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 20px;
   font-size: 150%;
   text-align: center;
+  background-image: url(resources/square.png);
+  background-size: 100% 100%;
 }
 .box:hover {
-  background-color: rgba(255, 255, 255, 0.137);
+  background-image: url(resources/square.png);
+  filter: brightness(1.75);
 }
 .boxResult {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(173, 173, 173);
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 2;
   height: 75px;
-  width: 402px;
-  color: black;
+  width: 394px;
+  color: rgb(0, 0, 0);
   font-size: 50px;
+  border: 2px solid blue;
   border-radius: 5px;
   font-family: "Orbitron", sans-serif;
-  font-style: bold;
   text-align: center;
   padding-bottom: 10px;
 }
@@ -43,10 +50,8 @@
 .plus {
   grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 4;
-  grid-row-end: 6;
-  background-color: bisque;
-  color: rgb(255, 255, 255);
+  grid-row-start: 3;
+  grid-row-end: 5;
 }
 
 .null {
@@ -60,21 +65,18 @@
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: rgba(255, 0, 0, 0.541);
 }
 .times {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: violet;
 }
 .minus {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: grey;
 }
 .one {
   grid-column-start: 1;
@@ -135,16 +137,12 @@
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
-  width: 70px;
-  background-color: red;
 }
 .equal {
   grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 6;
+  grid-row-start: 5;
   grid-row-end: 7;
-
-  background-color: gold;
 }
 .dot {
   grid-column-start: 3;
@@ -157,12 +155,10 @@
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: rgb(122, 108, 82);
 }
 .erase {
   grid-column-start: 4;
   grid-column-end: 5;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: rgb(167, 44, 44);
 }

@@ -1,26 +1,51 @@
-const display = document.getElementById("display");
-const buttons = document.querySelectorAll("button");
-const addOn = ["*", "/", "-", "+", "="];
-let result = "";
+let currentInput = "";
+let currentOp = "";
+let previousInput = "";
 
-const reikna = (btnValue) => {
-  display.focus();
-  if (btnValue === "=" && result !== "") {
-    result = eval(display.value);
-  } else if (btnValue === "AC") {
-    result = "";
-  } else if (btnValue === "DEL") {
-    result = result.toString().slice(0, -1);
-  } else {
-    if (result === "" && addOn.includes(btnValue)) return;
-    result += btnValue;
+function addNumb(number) {
+  currentInput += number;
+  document.getElementById(
+    "display"
+  ).value = `${previousInput} ${currentOp} ${currentInput}`;
+}
+
+function symbolAdd(operation) {
+  if (currentInput === "") return;
+  if (previousInput !== "") {
+    reikna();
   }
-  display.value = result;
-};
+  currentOp = operation;
+  previousInput = currentInput;
+  currentInput = "";
+  document.getElementById("display").value = `${previousInput} ${currentOp}`;
+}
 
-buttons.forEach((button) => {
-  button.addEventListener("click", (e) => reikna(e.target.dataset.value));
-});
+function reikna() {
+  if (previousInput === "" || currentInput === "") return;
+  let result;
+  let prev = parseFloat(previousInput);
+  let current = parseFloat(currentInput);
+  if (currentOp == "+") {
+    result = prev + current;
+  } else if (currentOp == "/") {
+    result = prev / current;
+  } else if (currentOp == "*") {
+    result = prev * current;
+  } else if (currentOp == "-") {
+    result = prev - current;
+  }
+  currentInput = result.toString();
+  currentOperation = "";
+  previousInput = "";
+  document.getElementById("display").value = currentInput;
+}
+
+function erase() {
+  currentInput = "";
+  previousInput = "";
+  currentOp = "";
+  document.getElementById("display").value = "";
+}
 
 function makeNoise() {
   var sound = document.getElementById("audio");
