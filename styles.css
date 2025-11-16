@@ -3,8 +3,10 @@ body {
 }
 
 .box-container {
-  height: 470px;
+  height: 600px;
   width: 500px;
+  display: grid;
+  align-items: center;
 }
 .calculatorBox {
   display: grid;
@@ -39,7 +41,7 @@ body {
   height: 75px;
   width: 394px;
   color: rgb(0, 0, 0);
-  font-size: 50px;
+  font-size: 4em;
   border: 2px solid blue;
   border-radius: 5px;
   font-family: "Orbitron", sans-serif;

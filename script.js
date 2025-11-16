@@ -1,8 +1,12 @@
 let currentInput = "";
 let currentOp = "";
 let previousInput = "";
+document.getElementById("display").readOnly = true;
 
 function addNumb(number) {
+  if (number === ".") {
+    if (currentInput.includes(".")) return;
+  }
   currentInput += number;
   document.getElementById(
     "display"
@@ -14,6 +18,7 @@ function symbolAdd(operation) {
   if (previousInput !== "") {
     reikna();
   }
+
   currentOp = operation;
   previousInput = currentInput;
   currentInput = "";
