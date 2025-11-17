@@ -41,11 +41,11 @@ body {
   height: 75px;
   width: 394px;
   color: rgb(0, 0, 0);
-  font-size: 4em;
+  font-size: 3em;
   border: 2px solid blue;
   border-radius: 5px;
   font-family: "Orbitron", sans-serif;
-  text-align: center;
+  text-align: end;
   padding-bottom: 10px;
 }
 
